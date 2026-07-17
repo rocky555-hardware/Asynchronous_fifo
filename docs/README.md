@@ -5,15 +5,6 @@
 This project focuses on the design and verification of an asynchronous First-In-First-Out (FIFO) buffer using SystemVerilog for the design and the Universal Verification Methodology (UVM) for verification. Asynchronous FIFOs are crucial components in digital systems for reliably transferring data between modules operating in different clock domains.
 
 The FIFO design implemented here is parameterized for adaptability, supporting configurable FIFO depth and pointer width. For this specific project implementation, the **data width is set to 8 bits**.
-
-### Key Challenges Addressed:
-
-*   **Clock Domain Crossing (CDC):** Ensuring reliable data transfer and synchronization between asynchronous clock domains (write clock `w_clk` and read clock `r_clk`).
-*   **Full/Empty Conditions:** Accurately generating and testing `full` and `empty` flags to prevent data overwrite and underflow.
-*   **Metastability Mitigation:** Verifying the Gray code pointer synchronization mechanism to minimize metastability risks.
-*   **Edge Case Handling:** Thoroughly testing boundary conditions and scenarios like simultaneous read/write operations.
-*   **Comprehensive Coverage:** Achieving high functional and code coverage using a robust UVM environment.
-
 ## FIFO Architecture
 
 The design employs a modular architecture for clarity and reliability:
@@ -86,16 +77,4 @@ A dedicated SystemVerilog Assertions (SVA) module (`fifo_assertions.sv`) was use
 *   **Flag Generation:** Accurate full/empty flag logic.
 *   **Reset Behavior:** Correct initialization on reset.
 *   **FIFO Operation Rules:** No writes when full, no reads when empty.
-
-## Results & Coverage
-
-*   **Functional Coverage:** 100% coverage achieved for all planned verification goals.
-*   **Assertion Coverage:** All assertions passed across all test scenarios.
-*   **UVM Report:** *(Placeholder - Add summary of key findings or link to report if available)*
-
-![Picture2](https://github.com/user-attachments/assets/d6acb256-1b2f-41a9-a0ae-44e5fb5ed6b7)
-
-![Picture3](https://github.com/user-attachments/assets/92f31fa8-844e-4ecc-864b-67013279ccb7)
-
-![Picture5](https://github.com/user-attachments/assets/e081639b-bd8c-4357-b150-a53135b8f4e2)
 
