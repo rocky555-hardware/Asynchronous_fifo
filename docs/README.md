@@ -68,7 +68,7 @@ A diverse range of scenarios were tested:
 
 ## Assertions
 
-A dedicated SystemVerilog Assertions (SVA) module (`fifo_assertions.sv`) was used for real-time property checking:
+A dedicated SystemVerilog Assertions (SVA) module (`fifo_assertions.sv`)
 
 *   **Data Transfer:** Correct write/read operations.
 *   **Pointer Increment:** Proper pointer updates & wraparound.
